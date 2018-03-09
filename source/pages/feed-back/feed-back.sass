@@ -1,0 +1,59 @@
+@import "../../sass/vars.sass"
+.feed-back-section
+	padding: $indents
+	.title-wrap
+		font-size: 30px
+		text-align: center
+		span
+			color: $main_color_red
+	.feed-back-body
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		padding-top: 50px
+		.fb-item
+			padding: 20px
+			background: $main_color_bg_gray
+			width: 49%
+			margin-bottom: 20px
+			box-shadow: 0 8px 15px 0 rgba(50, 50, 50, 0.75)
+			display: flex
+			flex-direction: column
+
+			.fb-face-name
+				display: flex
+				.fb-face
+					border: 5px solid $main_color_white
+					border-radius: 50%
+					img
+						max-width: 100%
+						border-radius: 50%
+				.fb-name
+					align-self: center
+					padding-left: 20px
+					font-size: 20px
+			.fb-feedback
+				padding: 40px 0 25px 15px
+				p
+					max-height: 165px
+					overflow: hidden
+					line-height: 31px
+			.fb-source
+				margin-top: auto
+				padding-left: 15px
+				a
+					+trans
+					text-decoration: none
+					span
+						color: $main_color_red
+						text-decoration: underline
+						padding-bottom: 3px
+
+
+
+
+
+
+
+// media
+@import '../../sass/_media.sass'

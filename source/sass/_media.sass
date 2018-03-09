@@ -1,0 +1,893 @@
+@import "../sass/vars.sass"
+
+
+/*==========  Desktop First Method  ==========*/
+@media only screen and (max-width : 1350px)
+	.common-header, .index-page-header
+		.common-header-content
+			justify-content: space-between
+			.logo
+				align-self: center
+			.main-menu
+				margin: 0
+				.main-menu-rouge,.main-menu-visible
+					ul
+						padding: 30px 25px 30px 65px
+						display: flex
+						justify-content: space-between
+						li
+							display: block
+							a
+								font-size: 14px
+				.main-menu-visible
+					ul
+						li
+							//padding-right: 30px
+				.main-menu-rouge
+					ul
+						padding-left: 25px
+						li
+							//padding-right: 10px
+			.online-chat
+				position: static
+				padding: 0
+				width: inherit
+				align-self: center
+				background: transparent
+				&:hover
+					/* style */
+					background-color: transparent
+				.red-square
+					position: static
+					width: 100px
+					height: 80px
+					padding: 0
+					display: flex
+					align-items: center
+					justify-content: center
+					cursor: pointer
+					transition: $trans
+					&:before
+						content: "Онлайн чат"
+						/* style */
+						color: $main_color_white
+						transform: scale(0.3)
+						transition: all 0.3s linear 0.3s
+
+						display: none
+					&:hover
+						/* style */
+						border-radius: 30px
+						background: $main_color_orange
+					&:hover img
+						display: none
+					&:hover:before
+						/* style */
+						transform: scale(1)
+						display: block
+				img
+					transition: $trans
+				span
+					display: none
+
+
+@media only screen and (min-width : 1199px)
+	.mfp-close-btn-in
+		.mfp-close
+			top: 10px
+			i
+				color: #000000
+
+@media only screen and (max-width : 1199px) and (max-height : 666px)
+	.mfp-close-btn-in
+		.mfp-close
+			top: 10px
+			i
+				color: #000000
+
+// Large devices (desktops, less than 1200px)
+@media only screen and (max-width : 1199px)
+	/**/
+	// для фиксированного сайта
+	// body
+	// 	width: 1200px
+	.header_modal
+		margin-top: 20px
+	.intermediate
+		.intermediate_wrap
+			margin-bottom: 20px
+			.modal_form_input_wrap
+				display: inline-block
+	.index-page-header
+		.index-page-description
+			.title-wrap
+				h1
+					span
+						display: block
+	.feedback
+		.container
+			.feedback-carousel
+				.feedback-carousel-item
+					.feedback-description
+						min-height: 400px
+						.img-wrap
+							transform: translate(-50%,-50%)
+							top: 0
+							img
+								filter: grayscale(0)
+	.footer
+		.footer-wrapper
+			justify-content: space-around
+			.footer-item
+				padding-bottom: 30px
+				&:last-of-type
+					/* style */
+					padding-bottom: 0
+				//.footer-item-title
+				//	text-align: center
+	.common-header,.index-page-header
+		.common-header-content
+			align-items: center
+			.main-menu
+				display: none
+			.main-menu-burger
+				display: flex
+				order: 1
+			.logo
+				order: 2
+			.online-chat
+				order: 3
+	.proxi-list-description
+		.proxi-description
+			.proxi-resorses
+				justify-content: space-around
+	.pcc-suppopt
+		justify-content: center
+		.pcc-suppopt-item
+			width: 90%
+	.pcc-raiting-buttons
+		flex-wrap: wrap
+		.pcc-raiting-buttons-item
+			margin: 0 0 30px
+			width: 51%
+			a
+				.descr-stars
+					right: 0
+	.pcc-share-like
+		justify-content: center
+	.pcc-menu
+		justify-content: space-around
+		.goals
+			display: none
+		.amount-price
+			display: none
+		.term
+			margin-left: initial
+	.pcc-table
+		table
+			tr
+				.cur-goal
+					width: 300px
+				.proxi-pcc
+					padding-left: 25px
+				.order
+					.proxi-btn
+						width: 100%
+						font-size: 16px
+						border-radius: 5px
+			tr.separately
+				.proxi-pcc
+					padding-left: 25px
+
+// Medium devices (tablets, less than 992px)
+@media only screen and (max-width : 991px)
+	/**/
+	.proxi-btn
+		box-shadow: none
+	.main-recovery
+		.mr-form
+			form
+				text-align: center
+				input
+					margin: 0 auto
+				.mr-wrap
+					margin: 40px auto 0
+					flex-direction: column
+					justify-content: center
+					align-items: center
+					span
+						padding: 30px 0 0
+	.header_nav
+		display: none
+	.header_logo
+		display: block
+		margin-top: 0
+	.header_modal
+		margin-top: 40px
+	nav[canvas]
+		display: block
+	.proxi-list-description
+		.proxi-description
+			.title-wrap
+				h2
+					span
+						display: block
+		.proxi-list
+			ul
+				li
+					font-size: 24px
+	.enter-section
+		.es-form
+			form
+				text-align: center
+				input
+					margin: 40px auto 0
+	.proxi-prorerties
+		.proxi-prorerties-wrap
+			padding: 100px 0
+	.tabs-bodyes
+		.tabs-body
+			.tabs-control-table
+				.table-wrapper
+					overflow: auto
+					max-height: 535px
+					.user-connection
+						width: 1200px
+					table
+						width: 1200px
+			.chosen-panel
+				.cp-select
+					margin-left: auto
+				.proxi-btn
+					margin-left: 0
+	.tabs-bodyes
+		.tabs-body
+			.change-user-parametres
+				form
+					input[type ='submit']
+						margin: 50px auto 0
+					label
+						text-align: center
+					input
+						margin: 10px auto
+						width: 80%
+	.footer
+		.footer-wrapper
+			.footer-item
+				.footer-item-contacts
+					display: flex
+					align-items: baseline
+					padding-bottom: 30px
+	.pcc-raiting-buttons
+		justify-content: flex-start
+		.pcc-raiting-buttons-item
+			margin-left: 100px
+			a
+				.descr-stars
+					right: -100px
+	.main-contacts
+		.row
+			.form-dir
+				form
+					input[type='submit']
+						margin: 30px auto 0
+			.contacts
+				margin-top: 50px
+	.pcc-table
+		table
+			tr
+				.cur-goal
+					width: 250px
+					font-size: 17px
+				.proxi-pcc
+					padding-left: 15px
+				.order
+					.proxi-btn
+						width: 100%
+						font-size: 16px
+						border-radius: 5px
+			tr.separately
+				.proxi-pcc
+					padding-left: 15px
+@media only screen and (max-width : 860px)
+	.tabs-bodyes
+		.tabs-body
+			.tabs-piece-form
+				.title-wrap
+					text-align: center
+	.feedback
+		.container
+			.feedback-carousel
+				.feedback-carousel-item
+					.feedback-description
+						.img-wrap
+							top: 0
+	.footer
+		.footer-wrapper
+			.footer-item
+				.footer-item-contacts
+					display: block
+				.company-creator
+					right: calc(50% - 243px)
+
+
+// Small devices (landscape phones, less than 768px)
+@media only screen and (max-width : 767px)
+	.personal-area-title
+		padding-bottom: 50px
+		.pa-tabs-menu
+			flex-direction: column
+			align-items: center
+			.proxi-btn
+				width: 80%
+				margin-bottom: 25px
+	.tabs-bodyes
+		.tabs-body
+			.tabs-piece-form
+				.goals-of-using
+					flex-direction: column
+					.goals-of-using-acc
+						width: 100%
+						.pb-goals
+							width: inherit
+					.proxi-btn
+						margin: 30px auto 0
+			.chossen-result
+				ul
+					flex-direction: column
+					li
+						text-align: center
+						padding-top: 15px
+						font-size: 20px
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+	.tabs-bodyes
+		.tabs-body
+			.chosen-panel
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				.cp-select
+					margin-left: 0
+	.main-recovery
+		.title-wrap
+			h2
+				font-size: 24px
+		.mr-form
+			form
+				input
+					width: 80%
+				.mr-wrap
+					width: 80%
+					input[type='submit']
+						width: 100%
+
+	.header_title
+		h1
+			font-size: 30px
+			margin-top: 40px
+	.header_modal
+		margin-top: 40px
+	[off-canvas*=left]
+		width: 255px
+	.react
+		h2
+			font-size: 20px
+	.file_wrap
+		input
+			width: 80%
+	.white-popup
+		textarea
+			min-height: 80px
+	.index-page-header
+		.index-page-description
+			.title-wrap
+				h1
+					font-size: 34px
+				p
+					font-size: 20px
+	.success-message
+		.title-wrap
+			span
+				display: block
+	.reliable-proxi
+		.title-wrap
+			text-align: center
+	.feed-back-section
+		.feed-back-body
+			.fb-item
+				width: 100%
+				.fb-face-name
+					.fb-name
+						text-align: center
+	.enter-section
+		.es-form
+			padding-top: 20px
+			form
+				input
+					width: 90%
+	.pcc-raiting-buttons
+		justify-content: space-between
+		.pcc-raiting-buttons-item
+			width: 70%
+			margin-left: 20px
+			a
+				.descr-stars
+					right: -125px
+	.pb-piece-form
+		.title-wrap
+			text-align: center
+		.goals-of-using
+			flex-wrap: wrap
+			justify-content: center
+			a
+				margin-left: 0
+			.goals-of-using-acc
+				width: 90%
+				margin-bottom: 25px
+				.pb-goals
+					width: 100%
+	.common-questions
+		.common-questions-accordion
+			.cq-accordion-item
+				.cqa-item-title
+					.text
+						font-size: 17px
+					.fa-angle-down
+						font-size: 2rem
+	.have-a-question
+		.no-answer
+			padding: 50px 10px 0
+	.main-contacts
+		.title-wrap
+			h2
+				span
+					display: block
+	.main_pbythe_p
+		.form_pbythe_p
+			padding-top: 50px
+			form
+				label,  h4
+					text-align: center
+				input, .main-input, label,  h4, .common-price
+					font-size: 17px
+				.select
+					.slct
+						font-size: 17px
+				.chosse-the-goal
+					.main-input
+						.main-level
+							.first-level
+								li
+									.first-level-content
+										&:hover .fa-angle-down
+											transform: rotate(180deg)
+										&:hover .second-level-list
+											/* style */
+											display: block
+											font-weight: lighter
+											animation: showFirstLevel .3s
+										.second-level-list
+											//bottom: 50px
+											top: 50px
+											left: 0
+											width: 100%
+											height: max-content
+											z-index: 999999999
+											text-align: center
+				.submit-block
+					flex-direction: column
+					justify-content: center
+					.common-price
+						padding: 23px 0 0 0
+						align-self: center
+						font-size: 17px
+	.pcc-table
+		padding: 25px 0 0
+		.choose-goal
+			display: block
+			&.select
+				padding: 0 15px
+				.slct_arrow
+					top: 14px
+					right: 25px
+					.fa
+						color: #fff
+				.slct
+					height: 50px
+					line-height: 50px
+					margin-bottom: 10px
+					color: #fff
+					background: $gradient_bg
+					border-radius: 5px
+				.drop
+					width: 95%
+		table
+			tr,tr.separately
+				display: none
+				&.active_tr
+					display: table-row
+					td
+						padding: 25px 0
+				td
+					padding: 0
+				.cur-goal,.order
+					display: none
+				.proxi-pcc
+					padding: 15px 0 0
+					font-size: 16px
+					span
+						text-align: center
+					.pcc-pieces
+						border-bottom: 0.5px solid $main_color_orange
+						width: 50%
+						margin: 0 auto
+		.btn_for_sm_dev
+			display: block
+			padding: 25px 15px 0
+			.proxi-btn
+				margin: 0 auto
+				width: 100%
+				box-shadow: none
+				border-radius: 5px
+	.pcc-suppopt
+		padding-top: 30px
+// Extra small devices (portrait phones, less than 576px)
+@media only screen and (max-width : 575px)
+	/**/
+	.pcc-raiting-buttons
+		.pcc-raiting-buttons-item
+			a
+				.descr-title
+					font-size: 18px
+				.descr-stars
+					right: -100px
+	.common-questions
+		.common-questions-accordion
+			.cq-accordion-item
+				.cqa-item-title
+					padding: 0 5px
+					.text
+						font-size: 15px
+					.fa-angle-down
+						font-size: 1.5rem
+				.cqa-item-body
+					p
+						font-size: 14px
+	.have-a-question
+		.connects
+			flex-direction: column
+			.connects-item
+				padding-bottom: 30px
+				&:last-of-type
+					/* style */
+					padding-bottom: 0
+	.footer
+		.footer-wrapper
+			.footer-item
+				padding: 0 30px 30px
+				ul
+					.footer-item-title
+						text-align: center
+					li
+						padding: 20px 0 20px
+						text-align: center
+						span
+							display: block
+							text-align: center
+						img
+							display: block
+							margin: 0 auto
+// Extra small devices (portrait phones, less than 521px)
+@media only screen and (max-width : 520px)
+	/**/
+	.white-popup
+		width: 100%
+		padding: 20px 10px 20px 10px
+	.white-popup
+		input[type=submit]
+			width: 100%
+	.common-header, .index-page-header
+		.common-header-content
+			.main-menu-burger
+				width: 80px
+				height: 60px
+				.main-menu-burger-strict
+					width: 45px
+					height: 4px
+			.online-chat
+				.red-square
+					width: 80px
+					height: 60px
+	.index-page-header
+		min-height: 500px
+		.index-page-description
+			display: flex
+			align-items: center
+			justify-content: center
+			.title-wrap
+				h1
+					font-size: 34px
+				p
+					font-size: 18px
+	.proxi-list-description
+		.proxi-list
+			ul
+				li
+					a
+						font-size: 25px
+		.all-proxi-objectives
+			.slct_arrow
+				i
+					font-size: 1.5rem
+			.all-proxi-objectives-title
+				font-size: 15px
+		.proxi-list
+			ul
+				li
+					span
+						display: block
+	.pcc-suppopt
+		.pcc-suppopt-item
+			.suppopt-item-black-part
+				font-size: 16px
+	.pcc-raiting-buttons
+		.pcc-raiting-buttons-item
+			a
+				.descr-title
+					text-align: left
+					padding: 0 10px
+					font-size: 14px
+				.descr-stars
+					width: 100px
+					right: -55px
+					i
+						font-size: 1rem
+					span
+						font-size: 1rem
+	.unsuccess-message
+		.title-wrap
+			font-size: 24px
+	.success-message, .unsuccess-message
+		.message-body
+			padding: 50px 10px
+			font-size: 18px
+		.button
+			.proxi-btn
+				padding: 0 10px
+				font-size: 14px
+	.pcc-share-like
+		flex-wrap: wrap
+		.iframe-place
+			margin: 25px 8px 0
+	.pb-piece-form
+		.title-wrap
+			text-align: center
+	.proxi-current-coutry
+		.title-wrap
+			font-size: larger
+		.form_pbythe_p
+			padding-top: 50px
+			form
+				label,  h4
+					text-align: center
+				input, .main-input, label,  h4, .common-price
+					font-size: 17px
+				.select
+					.slct
+						font-size: 17px
+				.chosse-the-goal
+					.main-input
+						.main-level
+							.first-level
+								li
+									.first-level-content
+										&:hover .fa-angle-down
+											transform: rotate(180deg)
+										&:hover .second-level-list
+											/* style */
+											display: block
+											font-weight: lighter
+											animation: showFirstLevel .3s
+										.second-level-list
+											//bottom: 50px
+											top: 50px
+											left: 0
+											width: 100%
+											height: max-content
+											z-index: 999999999
+											text-align: center
+		.proxi-by-the-piece,.pacet-proxi
+			.descr
+				width: 280px
+				font-size: 24px
+	.common-questions
+		.title-wrap
+			h2
+				font-size: 28px
+				span
+					display: block
+		.common-questions-accordion
+			.cq-accordion-item
+				.cqa-item-title
+					.text
+						text-align: center
+					.fa-angle-down
+						align-self: flex-start
+	.tabs-bodyes
+		.tabs-body
+			.change-user-parametres
+				form
+					.login-input
+						width: 100%
+					input
+						width: 100%
+					label
+						padding: 0
+			.tabs-piece-form
+				.goals-of-using
+					.goals-of-using-acc
+						.pb-goals
+							font-size: 14px
+							text-overflow: ellipsis
+							padding: 0 0 0 5px
+	.main-404
+		.page-404
+			p
+				span
+					display: block
+			.proxi-btn
+				width: 300px
+				font-size: 16px
+	.main-contacts
+		.title-wrap
+			h2
+				font-size: 32px
+		.row
+			.form-dir
+				form
+					.captcha
+						width: 280px
+						margin: 15px auto 0
+			.contacts
+				.contacts-list
+					p
+						padding-top: 15px
+						font-size: 18px
+					ul
+						li
+							font-size: 18px
+				.contacts-curr
+					span
+						font-size: 19px
+	.main_pbythe_p
+		.form_pbythe_p
+			form
+				.submit-block
+					.common-price
+						span
+							display: block
+							text-align: center
+							&:last-of-type
+								/* style */
+								display: inline
+	.currency-menu
+		font-size: 19px
+	.select
+		.drop
+			li
+				padding: 7px 15px
+	.pcc-menu
+		.term
+			margin-right: 10px
+		.currency-menu
+			display: flex
+			align-items: center
+	.pcc-table
+		table
+			tr,tr.separately
+				td
+				.proxi-pcc
+					font-size: 14px
+
+
+// Extra small devices (portrait phones, less than 481px)
+@media only screen and (max-width : 480px)
+	/**/
+	.our_advantages .our_advantages_item .our_advantages_item_img i
+		font-size: 37px
+	.header_title
+		h1
+			padding-left: 15px
+			padding-right: 15px
+			font-size: 23px
+	.intermediate
+		.intermediate_title
+			h3
+				font-size: 20px
+	.pcc-raiting-buttons
+		.pcc-raiting-buttons-item
+			a
+				.descr-stars
+					width: 85px
+	.tabs-bodyes
+		.tabs-body
+			.tabs-piece-form
+				.goals-of-using
+					.goals-of-using-acc
+						.pb-goals
+							font-size: 13px
+
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+	.index-page-header
+		.common-header-content
+			padding-bottom: 0
+		.index-page-description
+			padding-top: 0
+	.proxi-list-description
+		padding: 50px 0
+	.select
+		.drop
+			li
+				padding: 7px 5px
+	.pcc-menu
+		.term
+			.slct_arrow
+				top: 1px
+				right: 5px
+				.fa-angle-down
+					font-size: 1rem
+			.slct
+				font-size: 16px
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+// Small devices (landscape phones, 576px and up)
+@media only screen and (min-width : 576px)
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	.container
+		width: 1200px
+
+
+

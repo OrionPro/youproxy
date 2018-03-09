@@ -1,0 +1,154 @@
+@import "fonts"
+@import 'sprite'
+//main_color: #17a9d8
+//main_txt_color: #262626
+//main_bg_color: #fff
+//auxiliary_txt_color: #443133
+//font_RobotoRegular: "RobotoRegular", Arial, sans-serif
+//font_ROBOTO_BLACK: "ROBOTO-BLACK", Arial, sans-serif
+//font_ROBOTO_THIN: "ROBOTO-THIN", Arial, sans-serif
+//font_font_RobotoRegular: "MyriadPro-Regular", Arial, sans-serif
+//font_RobotoRegular: "MyriadPro-Bold", Arial, sans-serif
+
+//colors of project
+$main_color: #35be70
+$main_color_red: #ff4254
+$main_color_orange: #ff9800
+$main_color_black: #14111e
+$main_color_blue: #4267b2
+$main_color_white: #fff
+$auxiliary_txt_color: #443133
+$main_txt_color: #262626
+$main_bg_color: #fff
+$main_color_green: #05a720
+$main_color_bg_blue: #13111f
+$main_color_bg_gray: #eeeff2
+$main_color_text_red: #ffa1aa
+$main_color_bg_black: #131220
+$main_bg_gray: #e8e8e8
+$gradient_bg: linear-gradient(to right,$main_color_orange,$main_color_red)
+$gradient_bg_hov: linear-gradient(to left,$main_color_orange,$main_color_red)
+//Indents
+
+$indents: 100px 0
+$ind-small: 60px 0 0 0
+//transitions
+$trans: all 300ms linear
+
+$font_main_regular: "RobotoRegular",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+
+
+@mixin font($color, $fz, $ff, $lh: 1.6)
+	color: $color
+	font-size: $fz + px
+	font-size: ($fz/16) + rem
+	font-family: $ff
+	line-height: $lh
+
+@mixin trans()
+	transition: $trans
+	cursor: pointer
+
+@mixin fz($font_px)
+	font-size: $font_px + px
+	font-size: ($font_px/16) + rem
+
+@mixin pseudo($display: block, $pos: absolute, $content: '')
+	content: $content
+	display: $display
+	position: $pos
+
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false)
+	@include pseudo($pos: $position)
+	width: 0
+	height: 0
+	@if $round
+		border-radius: 3px
+	@if $direction == down
+		border-left: $size solid transparent
+		border-right: $size solid transparent
+		border-top: $size solid $color
+		margin-top: 0 - round( $size / 2.5 )
+	@else if $direction == up
+		border-left: $size solid transparent
+		border-right: $size solid transparent
+		border-bottom: $size solid $color
+		margin-bottom: 0 - round( $size / 2.5 )
+	@else if $direction == right
+		border-top: $size solid transparent
+		border-bottom: $size solid transparent
+		border-left: $size solid $color
+		margin-right: -$siz
+	@else if  $direction == left
+		border-top: $size solid transparent
+		border-bottom: $size solid transparent
+		border-right: $size solid $color
+		margin-left: -$size
+
+@mixin truncate($truncation-boundary)
+	max-width: $truncation-boundary
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+.main_btn
+	min-width: 272px
+	height: 49px
+	line-height: 49px
+	padding: 0 5px
+	border: 1px solid transparent
+	background-color: $main_color
+	text-transform: normal
+	border-radius: 5px
+	@include font(#fff, 16, $font_main_regular)
+	transition: 0.5s
+	&:hover
+		background-color: transparent
+		border: 1px solid $main_color
+		color: $main_color
+	&:active
+		background-color: transparent
+		border: 1px solid $main_color
+		color: $main_color
+	&:focus
+		background-color: transparent
+		border: 1px solid $main_color
+		color: $main_color
+		outline: 0
+.proxi-btn
+	+trans
+	width: 200px
+	height: 50px
+	background: $gradient_bg
+	color: $main_color_white
+	text-align: center
+	display: block
+	line-height: 50px
+	border-radius: 20px
+	font-size: 21px
+	font-weight: lighter
+	text-decoration: none
+	box-shadow: 0 3px 15px 0 rgba(50, 50, 50, 0.75)
+	&:hover
+		/* style */
+		box-shadow: none
+		color: $main_color_white
+		text-decoration: none
+.center
+	text-align: center
+.left
+	text-align: left
+.right
+	text-align: right
+
+
+%flex 
+	display: flex
+	align-items: center
+	justify-content: center
+
+	
+			
+
+
+
+

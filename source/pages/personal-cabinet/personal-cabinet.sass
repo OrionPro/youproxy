@@ -1,0 +1,284 @@
+@import "../../sass/vars.sass"
+
+
+.personal-area-title
+	text-align: center
+	padding: $indents
+	.pa-tabs-menu
+		padding-top: 50px
+		display: flex
+		justify-content: center
+		.proxi-btn
+			outline: none
+			border-color: transparent
+			margin-right: 25px
+			font-size: 18px
+			font-weight: 300
+			width: 300px
+			background: $main_color_orange
+			line-height: 48px
+			&.active-btn
+				background: $main_color_red
+.tabs-bodyes
+	padding-bottom: 100px
+	min-height: 900px
+	.tabs-body
+		display: none
+		&.active-body
+			display: block
+			animation: fade 0.3s ease-in
+		.change-user-parametres
+			form
+				input[type ='submit']
+					margin: $ind-small
+					box-shadow: none
+					border-color: transparent
+					width: 300px
+					padding: 0
+				input
+					display: block
+					height: 50px
+					width: 50%
+					margin-top: 10px
+					outline: none
+					font-size: 21px
+					box-sizing: border-box
+					padding: 10px
+				.login-name
+					font-size: 24px
+					font-weight: bold
+					color: black
+					padding-left: 0
+				.login-input
+					width: 370px
+					height: 50px
+					text-align: center
+					font-size: 21px
+					font-weight: bold
+					line-height: 50px
+				label
+					color: $main_color_red
+					padding-left: 30px
+					font-size: 21px
+					font-weight: lighter
+					margin-top: 30px
+		.tabs-piece-form
+			.title-wrap
+				font-size: 21px
+				font-weight: bold
+				text-align: left
+			.goals-of-using
+				display: flex
+				padding-top: 30px
+				align-items: center
+				.slct_arrow
+					line-height: 50px
+				.goals-of-using-acc
+					.pb-goals
+						+trans
+						display: flex
+						width: 470px
+						height: 50px
+						line-height: 50px
+						//padding: 10px 30px
+						justify-content: space-between
+						box-sizing: border-box
+						font-size: 18px
+						color: #000
+						border: 1px solid #000
+						margin: 0
+						background: $main_color_white
+						&:hover
+							/* style */
+							border-color: $main_color_red
+							color: $main_color_red
+						i
+							+trans
+							font-size: 2rem
+							&.rotate
+								transform: rotateX(180deg)
+					.pb-list
+						display: none
+						ul
+							text-align: center
+							background: $main_color_orange
+							color: $main_color_white
+							li
+								+trans
+								padding: 5px 0
+								font-size: 21px
+								&:hover
+									/* style */
+									background: $main_color_red
+				a
+					margin-left: 30px
+					align-self: flex-start
+					font-size: 17px
+		.tabs-control-table
+			padding: $ind-small
+			.table-wrapper
+				padding: 40px 20px 25px
+				border: 1px solid black
+				.user-connection
+					padding-bottom: 25px
+					ul
+						display: flex
+						justify-content: space-between
+						li
+							font-size: 18px
+							font-weight: bold
+							span
+								display: block
+				table
+					width: 100%
+					.orange-list
+						background: $main_color_orange
+						color: $main_color_white
+						th
+							font-size: 18px
+							padding: 15px 0
+							&:first-of-type
+								/* style */
+								padding-left: 30px
+					tr
+						td
+							padding-top: 20px
+							input[type='checkbox']
+								display: none
+							input
+								&:checked
+									+ label
+										&:before
+											border-color: transparent
+											content: "\f14a"
+											/* style */
+											color: $main_color_orange
+											font-family: 'FontAwesome'
+
+							label
+								font-size: 18px
+								display: inline-block
+								vertical-align: top
+								width: 175px
+								&:before
+									content: ""
+									/* style */
+									display: inline-block
+									width: 19px
+									height: 19px
+									border: 1px solid gray
+									cursor: pointer
+									line-height: 19px
+									text-align: center
+									margin: 5px 10px 0 0
+									vertical-align: top
+									transition: $trans
+						.goals-of-using
+							padding-left: 50px
+		.choosen-proxi
+			padding-top: 40px
+			.title-wrap
+				padding-left: 50px
+				font-size: 23px
+			.choosen-proxi-list
+				ul
+					li
+						display: inline-block
+						padding-left: 50px
+						animation: show 0.3s ease-in
+						i
+							color: $main_color_red
+							cursor: pointer
+							transition: $trans
+							&:hover
+								/* style */
+								color: $main_color_orange
+						span
+							font-size: 18px
+							padding-left: 8px
+			.choosen-all-proxi
+				padding: 25px 0 0 50px
+				input[type='checkbox']
+					display: none
+				input
+					&:checked
+						+ label
+							&:before
+								border-color: transparent
+								content: "\f14a"
+								/* style */
+								color: $main_color_orange
+								font-family: 'FontAwesome'
+
+				label
+					font-size: 18px
+					display: inline-block
+					vertical-align: top
+					width: 175px
+					&:before
+						content: ""
+						/* style */
+						display: inline-block
+						width: 19px
+						height: 19px
+						border: 1px solid gray
+						cursor: pointer
+						line-height: 19px
+						text-align: center
+						margin: 5px 10px 0 0
+						vertical-align: top
+						transition: $trans
+		.chosen-panel
+			padding: $ind-small
+			display: flex
+			align-items: flex-start
+			flex-wrap: wrap
+			.cp-select
+				margin-left: 25px
+				background: #fff
+				&:first-of-type
+					/* style */
+					margin-left: 0
+				.slct_arrow
+					top: 15px
+				.slct
+					background: #fff
+					border: 1px solid black
+					font-size: 18px
+					font-weight: lighter
+					width: 270px
+					height: 50px
+					line-height: 50px
+
+			.proxi-btn
+				margin-left: 25px
+				font-size: 18px
+				line-height: 48px
+				outline: none
+				border: none
+		.chossen-result
+			padding-top: 25px
+			ul
+				display: flex
+				li
+					font-size: 18px
+					font-weight: bold
+					padding-right: 5px
+					span
+						color: $main_color_red
+@keyframes fade
+	from
+		opacity: 0
+		transform: translateY(20px)
+	to
+		opacity: 1
+		transform: translateY(0)
+@keyframes show
+	from
+		opacity: 0
+		transform: translateX(-50px)
+	to
+		opacity: 1
+		transform: translateX(0)
+// media
+@import '../../sass/_media.sass'

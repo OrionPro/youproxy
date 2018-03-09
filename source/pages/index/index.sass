@@ -1,0 +1,383 @@
+@import "../../sass/vars.sass"
+
+a
+	text-decoration: none
+	&:hover
+		/* style */
+		text-decoration: none
+.common-header
+	display: none
+.index-page-header
+	background: url("../../img/header_proxy_bg.jpg") no-repeat  fixed
+	background-size: cover
+	overflow: hidden
+	height: 75vh
+	min-height: 600px
+	.common-header-content
+		padding: 30px 0 36px
+		display: flex
+		position: relative
+		.logo
+			.logo-wrapper
+				img
+			.logo-tagline
+				color: $main_color_white
+				text-align: center
+		.main-menu-burger
+			width: 100px
+			height: 80px
+			background: $main_color_red
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			display: none
+			cursor: pointer
+			transition: $trans
+			&:hover
+				background: $main_color_white
+			&:hover .main-menu-burger-strict
+				background: $main_color_red
+			.main-menu-burger-strict
+				height: 6px
+				width: 55px
+				background: $main_bg_color
+				margin-top: 10px
+				transition: $trans
+				&:first-of-type
+					/* style */
+					margin-top: 0
+		.main-menu
+			background: transparent
+			position: relative
+			margin-left: 60px
+			.orange-square
+				width: 75px
+				height: 75px
+				position: absolute
+				top: -25px
+				left: -25px
+				background: $main_color_orange
+
+			.main-menu-visible, .main-menu-rouge
+				background: $main_bg_color
+				ul
+					padding: 30px 50px 30px 90px
+					li
+						padding-right: 60px
+						position: relative
+						display: inline-block
+						&:last-of-type
+							/* style */
+							padding-right: 0
+						.main-menu-dropdown
+							display: flex
+							position: absolute
+							bottom: 0
+							left: 0
+						a
+							color: $main_color_black
+							text-decoration: none
+							cursor: pointer
+							transition: $trans
+							&:hover
+								/* style */
+								color: $main_color_orange
+			.main-menu-rouge
+				background: $main_color_red
+				position: relative
+				&:before
+					content: ""
+					/* style */
+					position: absolute
+					top: -20px
+					left: 125px
+					width: 0
+					height: 0
+					border-left: 15px solid transparent
+					border-right: 15px solid transparent
+					border-bottom: 20px solid $main_color_red
+
+				ul
+					padding-left: 50px
+					li
+						padding-right: 30px
+						color: $main_color_white
+						&:last-of-type
+							/* style */
+							padding-right: 0
+						a
+							color: $main_color_white
+		.online-chat
+			padding: 25px 100px
+			position: absolute
+			right: -457px
+			top: calc(50% - 85px)
+			background: $main_color_orange
+			width: 600px
+			cursor: pointer
+			transition: $trans
+			&:hover
+				/* style */
+				background: $main_color_red
+			&:hover .red-square
+				/* style */
+				background: $main_color_orange
+			.red-square
+				transition: $trans
+				text-align: center
+				padding: 40px 15px
+				position: absolute
+				top: -15px
+				left: 15px
+				background: $main_color_red
+			span
+				color: $main_color_white
+.index-page-description
+		display: flex
+		align-items: center
+		justify-content: center
+		padding-top: 50px
+		.title-wrap
+			h1
+				font-size: 54px
+				text-align: center
+				color: $main_color_white
+				span
+					color: $main_color_red
+			p
+				font-size: 27px
+				color: $main_color_white
+				text-align: center
+.proxi-list-description
+	padding: $indents
+	.proxi-list
+		//text-align: center
+		padding-bottom: 50px
+		ul
+			li
+				width: 80%
+				padding: 25px 0
+				margin: 35px auto 0
+				background: $gradient_bg
+				cursor: pointer
+				text-align: center
+				transition: $trans
+				box-shadow:  0 10px 15px 0 rgba(155, 155, 155, 0.75)
+				&:hover
+					/* style */
+					box-shadow: none
+				a
+					font-size: 30px
+					font-weight: 300
+					color: $main_color_white
+					width: 100%
+					height: 100%
+					//display: block
+					span
+						font-weight: bold
+				&:first-of-type
+					/* style */
+					margin-top: 0
+
+	.proxi-description
+		padding-top: 50px
+		.title-wrap
+			padding-bottom: 55px
+			.title__h2
+				font-size: 34px
+				font-weight: bold
+				color: $main_color_black
+				text-align: center
+				span
+					color: $main_color_red
+		.proxi-resorses
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			.proxi-resorses-item
+				width: 270px
+				height: 135px
+				margin-bottom: 30px
+				background: $main_color_bg_gray
+				box-shadow:  0 10px 15px 0 rgba(215, 215, 215, 0.75)
+				transition: $trans
+				&:hover
+					/* style */
+					box-shadow: none
+				a
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 100%
+					height: 100%
+					&:hover img
+						/* style */
+						filter: grayscale(100%)
+					img
+						max-width: 100%
+						transition: $trans
+						filter: grayscale(0)
+	.all-proxi-objectives
+		padding-top: 75px
+		.slct_arrow
+			i
+				color: $main_color_white
+				font-size: 2rem
+				transition: $trans
+		.all-proxi-objectives-title
+			padding: 20px
+			display: flex
+			justify-content: space-between
+			align-items: center
+			background: $main_color_bg_blue
+			cursor: pointer
+			transition: $trans
+			color: $main_color_white
+			font-size: 21px
+			&:hover
+				/* style */
+				background: lighten($main_color_bg_blue,15%)
+		.all-proxi-objectives-list
+			display: none
+			ul
+				background: $main_color_red
+				padding-bottom: 20px
+				li
+					+trans
+					font-size: 21px
+					text-align: center
+					padding-top: 20px
+					&:hover
+						/* style */
+						color: lighten($main_color_bg_blue,30%)
+.proxi-prorerties
+	background: url("../../img/index-shield-bg.jpg") no-repeat  fixed
+	background-size: cover
+	overflow: hidden
+	display: flex
+	justify-content: center
+	align-items: center
+	.proxi-prorerties-wrap
+		padding: 225px 0
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
+		.proxi-prorerties-item
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			padding: 20px
+			width: 270px
+			height: 270px
+			background-color: rgba($main_color_white,0.3)
+			margin: 25px 25px 35px
+			p
+				color: $main_color_white
+				text-align: center
+				font-size: 18px
+				padding-top: 10px
+.feedback
+	padding: $indents
+	.container
+		overflow: hidden
+		.title-wrap
+			h2
+				font-size: 15px
+				text-align: center
+				span
+					color: $main_color_red
+		.feedback-carousel
+			padding: 180px 0 60px
+			&.owl-carousel
+				.owl-dots
+					margin: 50px auto 0
+					display: flex
+					justify-content: center
+					.owl-dot
+						background: #000
+						width: 15px
+						height: 15px
+						border-radius: 50%
+						margin: 0 5px
+						&.active
+							background: $main_color_red
+				.owl-stage-outer
+					overflow: visible
+					.owl-item
+						//padding: 100px 0
+						&.center
+							transform: scale(1.1)
+							z-index: 9999
+							box-shadow: 0 15px 25px 0 rgba(50, 50, 50, 0.75)
+							transition: $trans
+							background: $main_color_bg_gray
+							.feedback-carousel-item
+								background: $main_color_bg_gray
+								.feedback-description
+									.img-wrap
+										img
+											filter: grayscale(0%)
+			.feedback-carousel-item
+				background: lighten($main_color_bg_gray,3%)
+				.feedback-description
+					position: relative
+					min-height: 490px
+					padding: 100px 40px 40px
+					display: flex
+					flex-direction: column
+					.img-wrap
+						position: absolute
+						top: -15%
+						left: 50%
+						border-radius: 50%
+						border: 8px solid $main_color_white
+						transform: translateX(-50%)
+						img
+							max-width: 100%
+							border-radius: 50%
+							filter: grayscale(100%)
+					.customer-name
+						padding-bottom: 40px
+						h3
+							text-align: center
+							font-size: 20px
+					.customer-feedback
+						p
+							text-align: center
+							font-size: 17px
+							font-weight: lighter
+							display: block
+							max-height: 216px
+							overflow: hidden
+							text-overflow: ellipsis
+					.feedback-source
+						padding-top: 30px
+						text-align: center
+						margin-top: auto
+						a
+							+trans
+							span
+								color: $main_color_red
+		.all-feedbacks
+			a
+				transition: $trans
+				text-decoration: none
+				display: block
+				color: $main_color_white
+				font-size: 17px
+				font-weight: lighter
+				width: 235px
+				height: 50px
+				margin: 50px auto 0
+				line-height: 50px
+				background: $gradient_bg
+				text-align: center
+				border-radius: 20px
+				&:hover
+					/* style */
+					transform: scale(0.95)
+
+// media
+@import '../../sass/_media.sass'

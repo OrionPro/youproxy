@@ -1,0 +1,63 @@
+@import "../../sass/vars.sass"
+
+.main-contacts
+	padding: $indents
+	.title-wrap
+		padding-bottom: 65px
+		text-align: center
+		h2
+			font-size: 34px
+			span
+				color: $main_color_red
+	.row
+		.form-dir
+			form
+				input, textarea
+					width: 100%
+					display: block
+					font-size: 21px
+					box-sizing: border-box
+					padding: 15px
+					margin-top: 20px
+					resize: none
+					outline: none
+				input
+					height: 50px
+					&:first-of-type
+						/* style */
+						margin-top: 0
+				textarea
+					height: 265px
+				input[type='submit']
+					width: 300px
+					padding: 0
+				.captcha
+					margin-top: 15px
+					width: 300px
+					height: 50px
+					background: $main_color_bg_gray
+
+		.contacts
+			background: #f3f3f3
+			padding: 40px
+			.contacts-curr
+				padding-top: 25px
+				display: flex
+				align-items: center
+				&:first-of-type
+					/* style */
+					padding-top: 0
+				span
+					font-weight: bold
+					font-size: 24px
+					padding-left: 40px
+			.contacts-list
+				font-size: 21px
+				p
+					padding-top: 15px
+				ul
+					li
+						padding-top: 15px
+
+
+@import '../../sass/_media.sass'

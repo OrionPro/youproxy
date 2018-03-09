@@ -1,0 +1,88 @@
+extends ../base
+block title
+	| purchase_by_the_piece
+block main
+	section.main_pbythe_p
+		.container
+			.title-wrap
+				p.title__h2 Оформление покупки
+			.row.form_pbythe_p
+				form.col-md-12
+					.country.col-md-6
+						label Страна
+						input(type='text' value='Россия' readonly)
+					.chosse-the-goal.col-md-6
+						.title
+							h4 Выберите цель использования:
+						.main-input
+							.main-level
+								span Цель использования
+								i(class="fa fa-angle-down fa-hov")
+								ul.first-level
+									li
+										.first-level-content
+											span.goal Цель использования1
+											i(class="fa fa-angle-down ")
+											ul.second-level-list
+												li Цель использования1-1
+												li Цель использования1-2
+												li Цель использования1-3
+												li Цель использования1-4
+									li
+										.first-level-content
+											span.goal Цель использования2
+											i(class="fa fa-angle-down ")
+											ul.second-level-list
+												li Цель использования2-1
+												li Цель использования2-2
+												li Цель использования2-3
+												li Цель использования2-4
+									li
+										.first-level-content
+											span.goal Цель использования3
+											i(class="fa fa-angle-down")
+											ul.second-level-list
+												li Цель использования3-1
+												li Цель использования3-2
+												li Цель использования3-3
+												li Цель использования3-4
+									li
+										.first-level-content
+											span.goal Цель использования4
+											i(class="fa fa-angle-down")
+											ul.second-level-list
+												li Цель использования4-1
+												li Цель использования4-2
+												li Цель использования4-3
+												li Цель использования4-4
+					.authorization.col-md-6
+						.title
+							h4 Авторизация:
+						.select
+							.slct_arrow
+								i.fa.fa-angle-down
+							a(href="#" class="slct") Пароль
+							ul.drop
+								li Еще что нибудь 1
+								li Еще что нибудь 2
+					.e_mail_block.col-md-6
+						.e_mail_wrapper
+							label Введите ваш e-mail:
+							input(type='text' name='email')
+					.choose_payment_type.col-md-6
+						.title
+							h4 Выберите способ оплаты:
+						.select
+							.slct_arrow
+								i.fa.fa-angle-down
+							a(href="#" class="slct ") Способ оплаты
+							ul.drop
+								li Еще что нибудь 1
+								li Еще что нибудь 2
+					.submit-block.col-md-6
+						input(type='submit' class='proxi-btn' value='Отправить')
+						.common-price Общая стоимость:&#160
+							span.red_color 100р.,
+							| Скидка:&#160
+							span.red_color 10%
+

@@ -1,0 +1,374 @@
+@import "../../sass/vars.sass"
+
+
+.proxi-current-coutry
+	padding: $indents
+	.title-wrap
+		text-align: center
+	.proxi-by-the-piece,.pacet-proxi
+		text-align: center
+		padding-top: 50px
+		.descr
+			display: block
+			position: relative
+			width: 365px
+			margin: 0 auto
+			padding: 5px 0
+			font-size: 30px
+			font-weight: bold
+			&:before
+				content: ""
+				/* style */
+				position: absolute
+				top: 0
+				left: 0
+				width: 25px
+				height: 25px
+				border-left: 4px solid $main_color_red
+				border-top: 4px solid $main_color_red
+			&:after
+				content: ""
+				/* style */
+				position: absolute
+				right: 0
+				bottom: 0
+				width: 25px
+				height: 25px
+				border-bottom: 4px solid #000
+				border-right:  4px solid #000
+			span
+				color: $main_color_red
+	.form_pbythe_p
+		padding-top: 50px
+		form
+			label,  h4
+				color: $main_color_red
+				font-size: 21px
+				font-weight: lighter
+				padding-top: 30px
+			input, .main-input
+				display: block
+				width: 100%
+				height: 50px
+				padding: 15px 25px
+				font-size: 21px
+				outline: none
+				border: 1px solid black
+			input
+				color: $main_color_red
+			input[type=submit]
+				padding: 0
+				width: 260px
+				font-weight: lighter
+				border-color: transparent
+				color: #fff
+			.fa-angle-down
+				font-size: 2rem
+			.select
+				.slct
+					border: 1px solid black
+					background: transparent
+					height: 50px
+					line-height: 50px
+					margin-bottom: 0
+					box-shadow: none
+					font-size: 21px
+				.slct_arrow
+					top: 12px
+			.country
+				input
+					border: 1px solid $main_color_red
+					color: $main_color_red
+					box-shadow: none
+			.chosse-the-goal
+				.main-input
+					padding: 0 10px 0 25px
+					position: relative
+					.main-level
+						width: 100%
+						line-height: 50px
+						display: flex
+						justify-content: space-between
+						align-items: center
+						cursor: pointer
+						span
+							display: block
+							white-space: nowrap
+							text-overflow: ellipsis
+							overflow: hidden
+							max-width: 90%
+						.fa-hov
+							transition: $trans
+						&:hover .fa-hov
+							/* style */
+							transform: rotate(180deg)
+						&:hover .first-level
+							display: block
+							animation: showFirstLevel .3s
+						.first-level
+							display: none
+							background:	#fff
+							position: absolute
+							top: 49px
+							left: -0.5%
+							z-index: 99
+							width: 101%
+							border: 1px solid black
+							transition: $trans
+							li
+								height: 45px
+								.first-level-content
+									width: 100%
+									height: 100%
+									cursor: pointer
+									display: flex
+									justify-content: space-between
+									align-items: center
+									padding: 0 10px 0 25px
+									transition: $trans
+									position: relative
+									.fa-angle-down
+										transition: $trans
+									&:hover
+										/* style */
+										background: $main_bg_gray
+										font-weight: bold
+									&:hover .fa-angle-down
+										/* style */
+										transform: rotate(-90deg)
+									&:hover .second-level-list
+										/* style */
+										display: block
+										font-weight: lighter
+										animation: showli .3s
+									.second-level-list
+										display: none
+										position: absolute
+										z-index: 99
+										top: 0
+										right: -270px
+										transition: $trans
+										background: #fff
+										border: 1px solid black
+										li
+											padding: 0 15px
+											transition: $trans
+											width: 100%
+											height: 45px
+											line-height: 45px
+											&:hover
+												/* style */
+												background: $main_bg_gray
+	a.proxi-btn
+		margin-left: 50px
+		align-self: flex-start
+
+.pcc-menu
+	display: flex
+	padding-top: 50px
+	font-size: 22px
+	font-weight: bold
+	justify-content: space-between
+	.goals
+		text-decoration: underline
+		padding-left: 50px
+	.amount-price
+		text-decoration: underline
+		margin-left: auto
+		padding-left: 150px
+	.term
+		background: $main_color_red
+		width: 150px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-left: auto
+		margin-right: 50px
+		.slct_arrow
+			top: initial
+			.fa-angle-down
+				color: $main_color_white
+		.slct
+			background: transparent
+			box-shadow: none
+			margin: auto
+			color: $main_color_white
+			padding: 0 5px
+			font-size: 17px
+			font-weight: lighter
+		.drop
+			background: $main_color_white
+			border: 1px solid $main_color_red
+			li
+				&:hover
+					/* style */
+					+trans
+					background: $main_color_red
+					color: $main_color_white
+	.currency-menu
+		+trans
+		font-weight: lighter
+		ul
+			display: flex
+			li
+				padding-right: 5px
+				&.cur-act
+					font-weight: bold
+					text-decoration: underline
+.pcc-table
+	padding: 50px 0
+	.choose-goal
+		display: none
+	table
+		width: 100%
+		tr
+			+trans
+			&:hover .proxi-pcc
+				/* style */
+				//background: $main_color_bg_gray
+				color: $main_color_red
+				transform: scale(1.1)
+			&.separately
+				.cur-goal
+					background: $main_color_white
+					.separately-goal
+						background: $main_color_bg_blue
+						height: 50px
+						padding: 0 30px
+						line-height: 50px
+				td
+
+					padding: 35px 0 0
+				.proxi-pcc
+					transition: all 150ms linear
+					cursor: pointer
+					padding-left: 50px
+			.order
+			.cur-goal
+				color: $main_color_white
+				background: $main_color_bg_black
+				width: 370px
+				font-size: 15px
+				padding: 0 15px
+				font-weight: lighter
+
+				&.rouge
+					background: $main_color_red
+					padding-left: 30px
+			.proxi-pcc
+				padding-left: 50px
+			td
+				+trans
+				vertical-align: middle
+				padding: 10px 0
+				span
+					display: block
+					.price,.cur-curency
+						display: inline
+	.btn_for_sm_dev
+		display: none
+.pcc-suppopt
+	padding-top: 50px
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	.pcc-suppopt-item
+		border: 3px solid $main_color_red
+		padding: 10px
+		margin-bottom: 25px
+		width: 370px
+		box-sizing: border-box
+		.suppopt-item-black-part
+			text-align: center
+			line-height: 50px
+			width: 100%
+			height: 50px
+			background: $main_color_bg_black
+			color: $main_color_white
+			font-size: 24px
+.pcc-raiting-buttons
+	padding: 50px 0
+	display: flex
+	justify-content: center
+	.pcc-raiting-buttons-item
+		margin-right: 150px
+		a
+			text-decoration: none
+			display: flex
+			position: relative
+			height: 75px
+			max-width: 450px
+			line-height: 75px
+			text-align: center
+			color: $main_color_white
+			.descr-title
+				background: $main_color_blue
+				padding: 0 50px
+				font-size: 21px
+				box-sizing: border-box
+				width: 350px
+				span
+					font-weight: bold
+			.descr-stars
+				width: 150px
+				background: $main_color_bg_gray
+				transform: skew(160deg)
+				box-shadow:  7px 7px 12px 0 rgba(50, 50, 50, 0.75)
+				position: absolute
+				right: -110px
+				span
+					color: yellow
+					transform: skew(20deg)
+					display: block
+					font-weight: bold
+					font-size: 1.5rem
+				i
+					color: yellow
+					transform: skew(20deg)
+					font-size: 1.5rem
+					&:last-of-type
+						/* style */
+						color: darken($main_color_bg_gray, 10%)
+.pcc-share-like
+	display: flex
+	align-items: center
+	span
+		font-weight: bold
+		font-size: 22px
+	.iframe-place
+		margin-left: 20px
+		width: 230px
+		height: 30px
+		background: $main_color_blue
+
+
+@keyframes showli
+	from
+		opacity: 0
+		transform: translateX(-15%)
+
+	to
+		opacity: 1
+		transform: translateX(0)
+@keyframes showFirstLevel
+	from
+		opacity: 0
+		transform: translateY(-15%)
+
+	to
+		opacity: 1
+		transform: translateY(0)
+
+
+
+
+
+
+
+
+
+
+
+
+// media
+@import '../../sass/_media.sass'

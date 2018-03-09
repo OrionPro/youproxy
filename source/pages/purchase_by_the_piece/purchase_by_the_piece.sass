@@ -1,0 +1,157 @@
+@import "../../sass/vars.sass"
+.main_pbythe_p
+	padding: 50px 0
+	.title-wrap
+		font-size: 28px
+		text-align: center
+	.form_pbythe_p
+		padding-top: 50px
+		form
+			label,  h4
+				color: $main_color_red
+				font-size: 21px
+				font-weight: lighter
+				padding-top: 30px
+			input, .main-input
+				display: block
+				width: 100%
+				height: 50px
+				padding: 15px 25px
+				font-size: 21px
+				outline: none
+				border: 1px solid black
+			input
+				color: $main_color_red
+			input[type=submit]
+				padding: 0
+				width: 260px
+				font-weight: lighter
+				border-color: transparent
+				color: #fff
+			.fa-angle-down
+				font-size: 2rem
+			.select
+				.slct
+					border: 1px solid black
+					background: transparent
+					height: 50px
+					line-height: 50px
+					margin-bottom: 0
+					box-shadow: none
+					font-size: 21px
+				.slct_arrow
+					top: 12px
+			.country
+				input
+					border: 1px solid $main_color_red
+					color: $main_color_red
+					box-shadow: none
+			.chosse-the-goal
+				.main-input
+					padding: 0 10px 0 25px
+					position: relative
+					.main-level
+						width: 100%
+						line-height: 50px
+						display: flex
+						justify-content: space-between
+						align-items: center
+						cursor: pointer
+						span
+							display: block
+							white-space: nowrap
+							text-overflow: ellipsis
+							overflow: hidden
+							max-width: 90%
+						.fa-hov
+							transition: $trans
+						&:hover .fa-hov
+							/* style */
+							transform: rotate(180deg)
+						&:hover .first-level
+							display: block
+							animation: showFirstLevel .3s
+						.first-level
+							display: none
+							background:	#fff
+							position: absolute
+							top: 49px
+							left: -0.5%
+							z-index: 99
+							width: 101%
+							border: 1px solid black
+							transition: $trans
+							li
+								height: 45px
+								.first-level-content
+									width: 100%
+									height: 100%
+									cursor: pointer
+									display: flex
+									justify-content: space-between
+									align-items: center
+									padding: 0 10px 0 25px
+									transition: $trans
+									position: relative
+									.fa-angle-down
+										transition: $trans
+									&:hover
+										/* style */
+										background: $main_bg_gray
+										font-weight: bold
+									&:hover .fa-angle-down
+										/* style */
+										transform: rotate(-90deg)
+									&:hover .second-level-list
+										/* style */
+										display: block
+										font-weight: lighter
+										animation: showli .3s
+									.second-level-list
+										display: none
+										position: absolute
+										z-index: 99
+										top: 0
+										right: -270px
+										transition: $trans
+										background: #fff
+										border: 1px solid black
+										li
+											padding: 0 15px
+											transition: $trans
+											width: 100%
+											height: 45px
+											line-height: 45px
+											&:hover
+												/* style */
+												background: $main_bg_gray
+			.submit-block
+				display: flex
+				align-items: center
+				margin-top: 30px
+				.common-price
+					font-size: 16px
+					align-self: flex-end
+					padding-left: 13px
+					.red_color
+						color: $main_color_red
+
+@keyframes showli
+	from
+		opacity: 0
+		transform: translateX(-15%)
+
+	to
+		opacity: 1
+		transform: translateX(0)
+@keyframes showFirstLevel
+	from
+		opacity: 0
+		transform: translateY(-15%)
+
+	to
+		opacity: 1
+		transform: translateY(0)
+
+
+@import '../../sass/_media.sass'

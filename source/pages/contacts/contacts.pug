@@ -1,0 +1,33 @@
+extends ../base
+block title
+	| contacts
+block main
+	section.main-contacts
+		.container
+			.title-wrap
+				p.title__h2 ЕСТЬ ВОПРОСЫ?&#160
+					span НАПИШИТЕ НАМ!
+			.row
+				.form-dir.col-lg-7.col-md-12.col-sm-12.col-xs-12
+					form
+						input(type='text' name='name' placeholder='Ваше имя')
+						input(type='text' name='email' placeholder='E-mail')
+						textarea(placeholder='Сообщение')
+						.captcha
+						input(type='submit' class='proxi-btn' value='Отправить сообщение')
+				.contacts.col-lg-5.col-md-12.col-sm-12.col-xs-12
+					.icq.contacts-curr
+						img(src=require("../../img/icq-red.png"))
+						span isq 658-878-569
+					.skype.contacts-curr
+						img(src=require("../../img/skype-red.png"))
+						span YouProxy
+					.mail.contacts-curr
+						img(src=require("../../img/email-icon-red.png"))
+						span support@youproxy.ru
+					.contacts-list
+						p При обращении указывать:
+						ul
+							li - цель использования прокси,используемый софт, проекты;
+							li - желаемый способ авторизации(логин/пароль или по IP);
+							li - сети исключения для вашего проекта (если имеются).

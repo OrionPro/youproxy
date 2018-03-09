@@ -1,0 +1,181 @@
+extends ../base
+block title
+	| personal-cabinet
+block main
+	section.personal-area-title
+		.title-wrap
+			p.title__h2 ЛИЧНЫЙ КАБИНЕТ
+		.pa-tabs-menu
+			button.proxi-btn Профиль
+			button.proxi-btn.active-btn Панель управления
+	section.tabs-bodyes
+		.container
+			.tabs-profile-body.tabs-body
+				.change-user-parametres
+					form
+						label(for='login-e-mail' class='login-name') Login/E-mail:
+						input(type='text' class='login-input' id='login-e-mail' value='holkitsor@yandex.ru' readonly)
+						label(for='name') Ваше имя
+						input(type='text' id='name')
+						label(for='surname') Ваша фамилия
+						input(type='text' id='surname')
+						label(for='password') Изменить пароль
+						input(type='password' id='password')
+						input(type='password' )
+						input(type='password' )
+						input(type='submit' value='Изменить' class='proxi-btn')
+			.tabs-control-panel-body.tabs-body.active-body
+				.tabs-piece-form
+					.title-wrap
+						h4 Экспортировать свой список IP:
+					.goals-of-using
+						.goals-of-using-acc.select
+							.slct_arrow
+								i.fa.fa-angle-down
+							a(href="#" class="slct pb-goals") Выберите формат выгружаемого файла
+							ul.drop
+								li Цель1
+								li Цель2
+								li Цель3
+								li Цель4
+						a(href='#').proxi-btn Выгрузить список
+				.tabs-control-table
+					.table-wrapper
+						.user-connection
+							ul
+								li Способ авторизации:
+								li IP
+									span (92.92.92.92:25132)
+								li Логин:
+									span superlonglongerlong345
+								li Пароль:
+									span q12w2e3r4rq12w2e3r4r
+								li Port:
+									span HTTP(s) 11111/Socks5 1111
+						table
+							tr.orange-list
+								th Дата выдачи
+								th Дата окончания
+								th Страна
+								th.goals-of-using Цель использования
+								th IP
+							tr
+								td
+									input(type='checkbox' id='check1' value='100')
+									label(for='check1') 2017-02-15
+								td 2018-02-30
+								td Россия
+								td.goals-of-using  Прокси для ArcheAge
+								td 115.136.61.128:57101
+							tr
+								td
+									input(type='checkbox' id='check2' value='200')
+									label(for='check2') 2017-02-15
+								td 2018-02-30
+								td Казахстан
+								td.goals-of-using  Прокси для ArcheAge
+								td 115.136.61.128:57102
+							tr
+								td
+									input(type='checkbox' id='check3' value='300')
+									label(for='check3') 2017-02-15
+								td 2018-02-30
+								td Россия
+								td.goals-of-using  Прокси для ArcheAge
+								td 115.136.61.128:57103
+							tr
+								td
+									input(type='checkbox' id='check4' value='400')
+									label(for='check4') 2017-02-15
+								td 2018-02-30
+								td Россия
+								td.goals-of-using  Прокси для remember-haramamburu
+								td 115.136.61.128:57104
+
+							tr
+								td
+									input(type='checkbox' id='check5' value='500')
+									label(for='check5') 2017-02-15
+								td 2018-02-30
+								td Россия
+								td.goals-of-using  Прокси для ArcheAge
+								td 115.136.61.128:57105
+							tr
+								td
+									input(type='checkbox' id='check6' value='600')
+									label(for='check6') 2017-02-15
+								td 2018-02-30
+								td Россия
+								td.goals-of-using  Прокси для ArcheAge
+								td 115.136.61.128:57106
+							tr
+								td
+									input(type='checkbox' id='check7' value='700')
+									label(for='check7') 2017-02-15
+								td 2018-02-30
+								td Россия
+								td.goals-of-using  Прокси для ArcheAge
+								td 115.136.61.128:57107
+							tr
+								td
+									input(type='checkbox' id='check8' value='800')
+									label(for='check8') 2017-02-15
+								td 2018-02-30
+								td Россия
+								td.goals-of-using  Прокси для ArcheAge
+								td 115.136.61.128:57108
+							tr
+								td
+									input(type='checkbox' id='check9' value='900')
+									label(for='check9') 2017-02-15
+								td 2018-02-30
+								td Россия
+								td.goals-of-using  Прокси для ArcheAge
+								td 115.136.61.128:57109
+				.choosen-proxi
+					.title-wrap
+						h5 Выбранные:
+					.choosen-proxi-list
+						ul
+					.choosen-all-proxi
+						input(type='checkbox' id='chosen-all')
+						label(for='chosen-all') Выделить всё
+					.chosen-panel
+						.cp-select.select
+							.slct_arrow
+								i.fa.fa-angle-down
+							a(href="#" class="slct renewal-period") Срок продления
+							ul.drop
+								li Цель1
+								li Цель2
+								li Цель3
+								li Цель4
+						.cp-select.select
+							.slct_arrow
+								i.fa.fa-angle-down
+							a(href="#" class="slct payment-type") Способ оплаты
+							ul.drop
+								li Цель1
+								li Цель2
+								li Цель3
+								li Цель4
+						form
+							input(type='hidden' class='exit-point')
+							input(type='submit' class='proxi-btn exit-btn' value='Выгрузить список')
+					.chossen-result
+						ul
+							li Выбрано&#160
+								span.items-length
+								| &#160 прокси.
+							li Стоимость&#160
+								span.final-value
+								| &#160руб.
+							li С учетом скидки&#160
+								span 0%
+								|&#160:&#160
+								span 0
+								| &#160руб.
+
+
+
+
