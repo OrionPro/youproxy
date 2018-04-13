@@ -52,7 +52,7 @@ const checked = (function(){
 				}
 			 	if(arr) {
 					arr.push(elem);
-				let childrenText = parent.children[parent.children.length - 1].textContent;
+				let childrenText = parent.children[0].textContent;
 					return childrenText;
 				}
 					return parent;
@@ -65,12 +65,13 @@ const checked = (function(){
 				console.log(exit.value);
 			},
 			counter = function(){
-				value = 0;
-				Array.prototype.forEach.call(arrInput, item => {
-					value +=  +item.value;
-				});
-				finalValue.textContent = value;
+				// value = 0;
+				// Array.prototype.forEach.call(arrInput, item => {
+				// 	value +=  +item.value;
+				// });
+				// finalValue.textContent = value;
 				proxiLength.textContent = arrLi.length;
+				
 			},
 			removeLi = function () {
 				chosseBtn.checked = false;
@@ -100,10 +101,10 @@ const checked = (function(){
 				arrInput = [].filter.call(arrInput,item => item !== that);
 				ul.removeChild(arrLi[delLi]);
 				arrLi.splice(delLi,1);
-				counter();
+				counter();				
 			},
 			currInput = function (ev,arr) {
-				ev.preventDefault();
+				// ev.preventDefault();
 			if(arr) {
 			Array.prototype.forEach.call(arr, item =>{
 				if (item.checked) {
@@ -118,7 +119,7 @@ const checked = (function(){
 				} else {
 					removeItems(this);
 				}
-			}
+			}			
 		},
 			chosseAll = function(){
 				if(this.checked) {
@@ -131,16 +132,16 @@ const checked = (function(){
 					arrInput = [];
 				 	arrLi = [];
 					[].forEach.call(inputs, item => item.checked = true);
-					currInput(event,inputs);
+					currInput('change',inputs);
 				}else{
 					[].forEach.call(inputs, item => item.checked = false);
-					currInput(event,inputs);
+					currInput('change',inputs);
 				}
 			};
 
 		[].forEach.call(inputs, item => item.addEventListener('change', currInput));
 		chosseBtn.addEventListener('change',chosseAll );
-		exitBtn.addEventListener('click',exitFunction);
+	//	exitBtn.addEventListener('click',exitFunction);
 
 		proxiLength.textContent = arrLi.length ? arrLi.length : 0;
 		finalValue.textContent = value;

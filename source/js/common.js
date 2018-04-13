@@ -58,8 +58,6 @@ export default class accordionBehavior{
 $(document).ready( function() {
 
 
-
-
 class ModalBehavior{
 	constructor(obj) {
 		this.btnOpen = this.findBtnOpen(obj.btnOpen) ? document.querySelectorAll(obj.btnOpen)[1] : document.querySelectorAll(obj.btnOpen)[0];
