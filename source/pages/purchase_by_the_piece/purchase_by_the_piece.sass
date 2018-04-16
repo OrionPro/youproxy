@@ -226,6 +226,11 @@
 						justify-content: space-between
 						align-items: center
 						cursor: pointer
+						&.blur-active
+							&:hover .first-level
+								display: none!important
+							.first-level
+								display: none!important
 						span
 							display: block
 							white-space: nowrap
