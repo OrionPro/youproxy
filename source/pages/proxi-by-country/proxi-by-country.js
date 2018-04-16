@@ -20,12 +20,12 @@ const fillGoalField = function(obj){
 		while(!conPar.classList.contains(obj.class)){
 			conPar = conPar.parentNode;
 		};
+
 		let content2 = Array.prototype.find.call(conPar.children, item => item.tagName === "SPAN");
 		field.textContent = `${content2.textContent}: ${content1}`;
 		field.value = this.value;
 	};
-	Array.prototype.forEach.call(currentValues, item => item.addEventListener('click',showContent))
-
+	Array.prototype.forEach.call(currentValues, item => item.addEventListener('click',showContent));
 };
 
 

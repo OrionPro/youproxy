@@ -126,8 +126,11 @@
 					background-color: #247500
 					background-image: linear-gradient(107deg, #247500 38%, #247500 62%)
 	.level-progress__item
-		position: relative
-		margin-right: 175px
+		width: 170px
+		display: flex
+		flex-direction: column
+		align-items: center
+		margin-right: 65px
 		&:last-of-type
 			margin-right: 0
 		&:first-of-type
@@ -137,17 +140,23 @@
 	.level-progress__item-cirlce
 		width: 60px
 		height: 60px
+		margin-bottom: 10px
 		display: flex
 		align-items: center
 		justify-content: center
 		background-color: #d6d6d6
 		border-radius: 50%
+		position: relative
 		transition: 0.5s
 		span
 			font-family: $font_main_regular
 			font-weight: bold
 			font-size: 34px
 			color: #302c2b
+	.level-progress__item-txt
+		font-size: 14px
+		text-align: center
+		font-weight: bold
 	.level-progress__line
 		width: 175px
 		height: 4px
