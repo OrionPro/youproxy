@@ -23,7 +23,7 @@ const fillGoalField = function(obj){
 		conPar.parentNode.parentNode.parentNode.classList.add('blur-active');
 		setTimeout(function () {
 			conPar.parentNode.parentNode.parentNode.classList.remove('blur-active');
-		}, 200);
+		}, 500);
 		let content2 = Array.prototype.find.call(conPar.children, item => item.tagName === "SPAN");
 		field.textContent = `${content2.textContent}: ${content1}`;
 		field.value = this.value;
