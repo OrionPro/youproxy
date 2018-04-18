@@ -38,14 +38,17 @@
 				border-right:  4px solid #000
 			span
 				color: $main_color_red
+	.pacet-proxi
+		padding-top: 25px
 	.form_pbythe_p
-		padding-top: 50px
+		padding-top: 25px
+		margin-bottom: -30px
 		form
 			label,  h4
 				color: $main_color_red
 				font-size: 21px
 				font-weight: lighter
-				padding-top: 30px
+				padding-top: 15px
 			input, .main-input
 				display: block
 				width: 100%
@@ -151,7 +154,8 @@
 										position: absolute
 										z-index: 99
 										top: 0
-										right: -270px
+										right: 0
+										transform: translateX(100%)
 										transition: $trans
 										background: #fff
 										border: 1px solid black
@@ -167,6 +171,15 @@
 	a.proxi-btn
 		margin-left: 50px
 		align-self: flex-start
+		&:hover
+			text-decoration: none
+			color: initial
+		&:active
+			text-decoration: none
+			color: initial
+		&:focus
+			text-decoration: none
+			color: initial
 
 .pcc-menu
 	display: flex
@@ -351,11 +364,11 @@
 @keyframes showli
 	from
 		opacity: 0
-		transform: translateX(-15%)
+		transform: translateX(80%)
 
 	to
 		opacity: 1
-		transform: translateX(0)
+		transform: translateX(100%)
 @keyframes showFirstLevel
 	from
 		opacity: 0

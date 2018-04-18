@@ -174,7 +174,7 @@
 		font-size: 28px
 		text-align: center
 	.form_pbythe_p
-		padding-top: 50px
+		padding-top: 25px
 		form
 			label,  h4
 				color: $main_color_red
@@ -286,7 +286,8 @@
 										position: absolute
 										z-index: 99
 										top: 0
-										right: -270px
+										right: 0
+										transform: translateX(100%)
 										transition: $trans
 										background: #fff
 										border: 1px solid black
@@ -313,11 +314,11 @@
 @keyframes showli
 	from
 		opacity: 0
-		transform: translateX(-15%)
+		transform: translateX(80%)
 
 	to
 		opacity: 1
-		transform: translateX(0)
+		transform: translateX(100%)
 @keyframes showFirstLevel
 	from
 		opacity: 0
