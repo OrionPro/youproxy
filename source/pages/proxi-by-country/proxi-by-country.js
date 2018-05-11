@@ -100,6 +100,7 @@ function changeCurr (obj){
 
 
 $(document).ready(function () {
+
 	"use strict";
 	fillGoalField({
 		field:'.main-level > span',
