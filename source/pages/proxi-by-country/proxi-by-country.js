@@ -14,16 +14,17 @@ const fillGoalField = function(obj){
 	const field = document.querySelector(obj.field);
 	const currentValues = document.querySelectorAll(obj.list);
 
-	const showContent = function () {
+	const showContent = function (e) {
 		let content1 = this.textContent;
 		let conPar = this.parentNode;
+
+		e.preventDefault();
+		e.stopPropagation();
+
 		while(!conPar.classList.contains(obj.class)){
 			conPar = conPar.parentNode;
 		};
 		conPar.parentNode.parentNode.parentNode.classList.add('blur-active');
-		setTimeout(function () {
-			conPar.parentNode.parentNode.parentNode.classList.remove('blur-active');
-		}, 500);
 		let content2 = Array.prototype.find.call(conPar.children, item => item.tagName === "SPAN");
 		field.textContent = `${content2.textContent}: ${content1}`;
 		field.value = this.value;
@@ -100,7 +101,13 @@ function changeCurr (obj){
 
 
 $(document).ready(function () {
-
+	$('.main-level').on('click', function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+		if($(this).hasClass('blur-active')) {
+			$(this).removeClass('blur-active');
+		}
+	});
 	"use strict";
 	fillGoalField({
 		field:'.main-level > span',
