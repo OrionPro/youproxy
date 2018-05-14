@@ -108,6 +108,11 @@ $(document).ready(function () {
 			$(this).removeClass('blur-active');
 		}
 	});
+	$('.main-level').hover(function () {
+		if($(this).hasClass('blur-active')) {
+			$(this).removeClass('blur-active');
+		}
+	});
 	"use strict";
 	fillGoalField({
 		field:'.main-level > span',
