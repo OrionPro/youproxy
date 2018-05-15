@@ -101,10 +101,22 @@ function changeCurr (obj){
 
 
 $(document).ready(function () {
-	$('.main-level').on('click', function (e) {
-		e.preventDefault();
-		e.stopPropagation();
+	$('.main-level').on('click', function (event) {
+		event.preventDefault();
+		event.stopPropagation();
+
 		if($(this).hasClass('blur-active')) {
+			$(this).removeClass('blur-active');
+		}
+		if($(event.target).hasClass('first-level-content') && $(event.target).find('.second-level-list').is(":visible") && $(event.target).find('.second-level-list').css("visibility") == "visible" && $(event.target).find('.second-level-list').css("opacity") == 1) {
+			console.log('класс first-level-content и видимый second-level-list');
+			$(this).find('.second-level-list').hide();
+		}
+		if($(event.target).hasClass('active') && $(event.target).hasClass('main-level')){
+			$(this).addClass('blur-active');
+			$(this).removeClass('active');
+		} else {
+			$(this).addClass('active');
 			$(this).removeClass('blur-active');
 		}
 	});
