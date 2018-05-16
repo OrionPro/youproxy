@@ -110,6 +110,9 @@
 						&:hover .fa-hov
 							/* style */
 							transform: rotate(180deg)
+						&.blur-active .fa-hov
+							/* style */
+							transform: rotate(0deg)
 						&:hover .first-level
 							display: block
 							animation: showFirstLevel .3s
@@ -364,10 +367,12 @@
 
 @keyframes showli
 	from
+		display: block
 		opacity: 0
 		transform: translateX(80%)
 
 	to
+		display: block
 		opacity: 1
 		transform: translateX(100%)
 @keyframes showFirstLevel

@@ -1,15 +1,13 @@
-
 import common from '../../js/common';
 //import '../../pages/proxi-by-country/proxi-by-country.pug'; //это для обновления страницы при hotreload - при npm build убрать
 //import '../../pages/modal.pug'; //это для обновления страницы при hotreload - при npm build убрать
 import './proxi-by-country.sass';
 
 
-
 import animate from '../../js/animate';
 import App from '../../js/react';
 
-const fillGoalField = function(obj){
+const fillGoalField = function (obj) {
 	"use strict";
 	const field = document.querySelector(obj.field);
 	const currentValues = document.querySelectorAll(obj.list);
@@ -21,48 +19,54 @@ const fillGoalField = function(obj){
 		e.preventDefault();
 		e.stopPropagation();
 
-		while(!conPar.classList.contains(obj.class)){
+		while (!conPar.classList.contains(obj.class)) {
 			conPar = conPar.parentNode;
 		};
 		conPar.parentNode.parentNode.parentNode.classList.add('blur-active');
+		if(window.matchMedia("(max-width: 992px)").matches) {
+			conPar.parentNode.parentNode.parentNode.classList.remove('active');
+			$(this).parents('.first-level').find('.first-level-content').removeClass('active');
+			$(this).parents('.first-level').find('.second-level-list').css('display', 'none');
+			$(this).parents('.first-level').find('.fa-angle-down').css('transform', 'rotate(0deg)');
+		}
 		let content2 = Array.prototype.find.call(conPar.children, item => item.tagName === "SPAN");
 		field.textContent = `${content2.textContent}: ${content1}`;
 		field.value = this.value;
 	};
-	Array.prototype.forEach.call(currentValues, item => item.addEventListener('click',showContent));
+	Array.prototype.forEach.call(currentValues, item => item.addEventListener('click', showContent));
 };
 
 
-function chosseCurency(obj){
+function chosseCurency(obj) {
 	"use strict";
 	const list = document.querySelectorAll(obj.list);
 	const curType = document.querySelectorAll(obj.currType);
 	const price = document.querySelectorAll(obj.price);
 	let termin = document.querySelectorAll(obj.termin);
 
-	let changeTermin = function(){
-		let term = +this.textContent.replace(/\D/g,'');
+	let changeTermin = function () {
+		let term = +this.textContent.replace(/\D/g, '');
 
-		Array.prototype.forEach.call(price, item =>{
+		Array.prototype.forEach.call(price, item => {
 			item.textContent = +item.textContent * term;
 		})
 	};
 
 
-	let activeFunc = function(){
+	let activeFunc = function () {
 		let curCurrency;
 		Array.prototype.forEach.call(list, item => item.classList.remove(obj.class));
 		this.classList.add(obj.class);
-			switch(this.textContent){
-				case 'UAH':
-					curCurrency = 'грн';
-					break;
-				case 'RUB':
-					curCurrency = 'руб';
-					break;
-				default:
-					curCurrency = this.textContent.toLowerCase();
-			}
+		switch (this.textContent) {
+			case 'UAH':
+				curCurrency = 'грн';
+				break;
+			case 'RUB':
+				curCurrency = 'руб';
+				break;
+			default:
+				curCurrency = this.textContent.toLowerCase();
+		}
 		Array.prototype.forEach.call(curType, item => item.textContent = curCurrency);
 	};
 
@@ -74,17 +78,17 @@ function chosseCurency(obj){
 	// });
 }
 
-function changeCurr (obj){
+function changeCurr(obj) {
 	"use strict";
 	const currButtons = document.querySelectorAll(obj.currButtons);
 	const tableTr = document.querySelectorAll(obj.tableTr);
 
 
-	let changeGoal = function(){
+	let changeGoal = function () {
 
-		let number = Array.prototype.indexOf.call(currButtons,this);
+		let number = Array.prototype.indexOf.call(currButtons, this);
 
-		Array.prototype.forEach.call(tableTr, (item,i) =>{
+		Array.prototype.forEach.call(tableTr, (item, i) => {
 
 			item.classList.remove(obj.class);
 
@@ -93,41 +97,98 @@ function changeCurr (obj){
 		});
 
 	};
-	
-	Array.prototype.forEach.call(currButtons, item =>{
-		item.addEventListener('click',changeGoal);
+
+	Array.prototype.forEach.call(currButtons, item => {
+		item.addEventListener('click', changeGoal);
 	});
 }
+function multiMenu () {
+	if (window.matchMedia("(max-width: 992px)").matches) {
+		$(document).click(function (event) {
+			if ($(event.target).closest(".main-level").length)
+				return;
+			$('.main-level').removeClass('active');
+			$('.main-level').find('.first-level-content').removeClass('active');
+			$('.main-level').find('.second-level-list').css('display', 'none');
+			$('.main-level').find('.first-level-content .fa-angle-down').css('transform', 'rotate(0deg)');
+			event.stopPropagation();
+		});
+		$('.main-level').on('click', function (event) {
+			event.preventDefault();
+			event.stopPropagation();
+			if ($(this).hasClass('blur-active')) {
+				$(this).removeClass('blur-active');
+			}
+			if ($(this).hasClass('active') && $(this).hasClass('main-level')) {
+				$(this).addClass('blur-active');
+				$(this).removeClass('active');
+				$(this).find('.first-level-content').removeClass('active');
+				$(this).find('.second-level-list').css('display', 'none');
+			} else {
+				$(this).addClass('active');
+				$(this).removeClass('blur-active');
+			}
+		});
+		$('.main-level .first-level-content').on('click', function (event) {
+			event.preventDefault();
+			event.stopPropagation();
+			$(this).parents('.first-level').find('.fa-angle-down').css('transform', 'rotate(0deg)');
+			if ($(this).hasClass('first-level-content') && !$(this).hasClass('active')) {
+				$(this).parents('.main-level').find('.first-level-content').removeClass('active');
+				$(this).parents('.main-level').find('.second-level-list').css('display', 'none');
+				$(this).addClass('active');
+				$(this).find('.second-level-list').css('display', 'block');
+				$(this).find('.fa-angle-down').css('transform', 'rotate(180deg)');
+			} else {
+				$(this).removeClass('active');
+				$(this).find('.second-level-list').css('display', 'none');
+				$(this).find('.fa-angle-down').css('transform', 'rotate(0deg)');
+			}
+		});
+	}
 
+	if (window.matchMedia("(min-width: 993px)").matches) {
+		$('.main-level').hover(function () {
 
+			if ($(this).hasClass('blur-active')) {
+				$(this).removeClass('blur-active');
+			}
+			if ($(this).hasClass('active') && $(this).hasClass('main-level')) {
+				$(this).addClass('blur-active');
+				$(this).removeClass('active');
+				$(this).find('.first-level-content').removeClass('active');
+				$(this).find('.second-level-list').css('display', 'none');
+			} else {
+				$(this).addClass('active');
+				$(this).removeClass('blur-active');
+			}
+		});
+		$('.main-level .first-level-content').hover(function () {
+
+			$(this).parents('.first-level').find('.fa-angle-down').css('transform', 'rotate(0deg)');
+			if ($(this).hasClass('first-level-content') && !$(this).hasClass('active')) {
+				$(this).parents('.main-level').find('.first-level-content').removeClass('active');
+				$(this).parents('.main-level').find('.second-level-list').css('display', 'none');
+				$(this).addClass('active');
+				$(this).find('.second-level-list').css('display', 'block');
+				$(this).find('.fa-angle-down').css('transform', 'rotate(180deg)');
+			} else {
+				$(this).removeClass('active');
+				$(this).find('.second-level-list').css('display', 'none');
+				$(this).find('.fa-angle-down').css('transform', 'rotate(0deg)');
+			}
+		});
+	}
+}
+$(window).resize(function () {
+	multiMenu();
+});
 $(document).ready(function () {
-	$('.main-level').on('click', function (event) {
-		event.preventDefault();
-		event.stopPropagation();
 
-		if($(this).hasClass('blur-active')) {
-			$(this).removeClass('blur-active');
-		}
-		if($(event.target).hasClass('first-level-content') && $(event.target).find('.second-level-list').is(":visible") && $(event.target).find('.second-level-list').css("visibility") == "visible" && $(event.target).find('.second-level-list').css("opacity") == 1) {
-			console.log('класс first-level-content и видимый second-level-list');
-			$(this).find('.second-level-list').hide();
-		}
-		if($(event.target).hasClass('active') && $(event.target).hasClass('main-level')){
-			$(this).addClass('blur-active');
-			$(this).removeClass('active');
-		} else {
-			$(this).addClass('active');
-			$(this).removeClass('blur-active');
-		}
-	});
-	$('.main-level').hover(function () {
-		if($(this).hasClass('blur-active')) {
-			$(this).removeClass('blur-active');
-		}
-	});
+	multiMenu();
 	"use strict";
 	fillGoalField({
-		field:'.main-level > span',
+		field: '.main-level > span',
 		list: '.second-level-list > li',
 		class: 'first-level-content'
 	});
