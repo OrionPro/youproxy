@@ -44,6 +44,7 @@
     "jquery-inputmask": "^1.0.1",
     "jquery-validation": "^1.16.0",
     "magnific-popup": "^1.1.0",
+    "mixin-deep": "^2.0.0",
     "mobile-detect": "^1.3.6",
     "owl-carousel-2": "0.0.3",
     "select2": "^4.0.3",
