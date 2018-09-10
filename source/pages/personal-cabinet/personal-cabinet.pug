@@ -13,16 +13,24 @@ block main
 			.tabs-profile-body.tabs-body
 				.change-user-parametres
 					form
-						label(for='login-e-mail' class='login-name') Login/E-mail:
-						input(type='text' class='login-input' id='login-e-mail' value='holkitsor@yandex.ru' readonly)
-						label(for='name') Ваше имя
-						input(type='text' id='name')
-						label(for='surname') Ваша фамилия
-						input(type='text' id='surname')
+						.change-user-parametres__inner-login
+							label(for='login-e-mail' class='login-name') Login/E-mail:
+							input(type='text' class='login-input' id='login-e-mail' value='holkitsor@yandex.ru' readonly)
+						.change-user-parametres__inner
+							.change-user-parametres__inner-item
+								label(for='name') Ваше имя
+								input(type='text' id='name')
+							.change-user-parametres__inner-item.right-block
+								label(for='surname') Ваша фамилия
+								input(type='text' id='surname')
 						label(for='password') Изменить пароль
-						input(type='password' id='password')
-						input(type='password' )
-						input(type='password' )
+						.change-user-parametres__inner.three-columns
+							.change-user-parametres__inner-item.three-columns
+								input(type='password' id='password' placeholder="Введите текущий пароль")
+							.change-user-parametres__inner-item.three-columns
+								input(type='password' placeholder="Введите новый пароль")
+							.change-user-parametres__inner-item.three-columns
+								input(type='password' placeholder="Повторите новый пароль")
 						input(type='submit' value='Изменить' class='proxi-btn')
 			.tabs-control-panel-body.tabs-body.active-body
 				.tabs-piece-form

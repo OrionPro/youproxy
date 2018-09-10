@@ -30,38 +30,53 @@
 		.change-user-parametres
 			form
 				input[type ='submit']
-					margin: $ind-small
+					margin: 40px 0 0 0
 					box-shadow: none
 					border-color: transparent
 					width: 300px
 					padding: 0
 				input
-					display: block
+					width: 100%
 					height: 50px
-					width: 50%
-					margin-top: 10px
+					line-height: 50px
 					outline: none
-					font-size: 21px
+					font-size: 18px
 					box-sizing: border-box
-					padding: 10px
+					padding-left: 30px
 				.login-name
 					font-size: 24px
 					font-weight: bold
 					color: black
-					padding-left: 0
 				.login-input
 					width: 370px
 					height: 50px
 					text-align: center
-					font-size: 21px
+					font-size: 18px
 					font-weight: bold
 					line-height: 50px
 				label
-					color: $main_color_red
-					padding-left: 30px
+					color: $main_color_black
 					font-size: 21px
 					font-weight: lighter
 					margin-top: 30px
+					margin-bottom: 5px
+				.change-user-parametres__inner-login
+					display: flex
+					flex-direction: column
+				.change-user-parametres__inner
+					display: flex
+					flex-wrap: wrap
+					&.three-columns
+						justify-content: space-between
+					input
+						flex-shrink: 0
+				.change-user-parametres__inner-item
+					width: 570px
+					flex-shrink: 0
+					&.three-columns
+						width: 370px
+					&.right-block
+						margin-left: auto
 		.tabs-piece-form
 			.title-wrap
 				font-size: 21px
