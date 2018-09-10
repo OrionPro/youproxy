@@ -7,7 +7,7 @@
 		h2
 			font-size: 34px
 	.es-form
-		padding-top: 60px
+		padding-top: 0
 		form
 			font-size: 21px
 			input[type='submit']
@@ -19,19 +19,25 @@
 				display: block
 				width: 74%
 				height: 50px
+				line-height: 50px
 				outline: none
 				box-sizing: border-box
-				padding: 5px 10px
-				color: $main_color_red
+				padding-left: 30px
+				color: $main_color_black
 			label
-				color: $main_color_red
+				color: $main_color_black
 				margin-top: 40px
-				padding-left: 15px
+				padding-left: 0
+			.es-form__link-reg
+				display: flex
+				width: 74%
 			a
 				color: $main_color_orange
-				padding-top: 40px
+				padding-top: 35px
 				display: block
 				transition: $trans
+				&.link-reg-right
+					margin-left: auto
 				&:hover
 					/* style */
 					color: $main_color_red
