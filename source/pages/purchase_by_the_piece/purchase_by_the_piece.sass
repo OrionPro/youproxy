@@ -177,7 +177,7 @@
 		padding-top: 25px
 		form
 			label,  h4
-				color: $main_color_red
+				color: $main_color_black
 				font-size: 21px
 				font-weight: lighter
 				padding-top: 30px
@@ -212,8 +212,9 @@
 					top: 12px
 			.country
 				input
-					border: 1px solid $main_color_red
-					color: $main_color_red
+					background-color: #f1f1f1
+					border: 1px solid #d6d6d6
+					color: $main_color_black
 					box-shadow: none
 			.chosse-the-goal
 				.main-input
@@ -253,9 +254,9 @@
 							background:	#fff
 							position: absolute
 							top: 49px
-							left: -0.5%
+							left: -1px
 							z-index: 99
-							width: 101%
+							width: 100.5%
 							border: 1px solid black
 							transition: $trans
 							li
@@ -306,13 +307,16 @@
 			.submit-block
 				display: flex
 				align-items: center
-				margin-top: 30px
+				margin-top: 50px
 				.common-price
-					font-size: 16px
-					align-self: flex-end
-					padding-left: 13px
+					font-size: 21px
+					align-self: center
+					padding-left: 65px
+					br
+						display: none
 					.red_color
 						color: $main_color_red
+						font-weight: bold
 
 @keyframes showli
 	from

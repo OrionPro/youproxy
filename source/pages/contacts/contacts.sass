@@ -21,6 +21,8 @@
 					margin-top: 20px
 					resize: none
 					outline: none
+				input[type=submit]
+					margin-top: 50px
 				input
 					height: 50px
 					&:first-of-type
@@ -38,19 +40,40 @@
 					background: $main_color_bg_gray
 
 		.contacts
+			height: 405px
 			background: #f3f3f3
-			padding: 40px
+			padding: 20px
 			.contacts-curr
-				padding-top: 25px
+				padding-top: 10px
 				display: flex
 				align-items: center
 				&:first-of-type
-					/* style */
 					padding-top: 0
+				&.magrin-bot
+					margin-bottom: 20px
+				img
+					width: 25px
+				i
+					width: 25px
+					color: $main_color_red
+					font-size: 25px
 				span
-					font-weight: bold
-					font-size: 24px
-					padding-left: 40px
+					font-size: 18px
+					padding-left: 20px
+					a
+						color: $main_color_black
+						&:hover
+							text-decoration: none
+						&:active
+							text-decoration: none
+						&:focus
+							text-decoration: none
+
+			.contacts-title
+				margin-bottom: 5px
+				font-size: 22px
+				color: $main_color_black
+				font-family: $font_main_bold
 			.contacts-list
 				font-size: 21px
 				p

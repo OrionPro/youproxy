@@ -6,7 +6,7 @@ block main
 		.container
 			.title-wrap
 				p.title__h2 Оформление покупки
-			// здесь есть уровни level-1 (до 4 го) и level-all-complete все зелёные
+			// здесь есть уровни level-1 (до 5 го) и level-all-complete все зелёные
 			.level-progress.level-1
 				.level-progress__item
 					.level-progress__item-cirlce
@@ -31,14 +31,24 @@ block main
 						span 4
 					.level-progress__item-txt
 						| Подтверждение оплаты
-			.row.form_pbythe_p
-				form.col-md-12
+			.form_pbythe_p
+				form.row
 					.country.col-md-6
 						label Страна
 						input(type='text' value='Россия' readonly)
-					.chosse-the-goal.col-md-6
+					.authorization.col-md-6
 						.title
 							h4 Выберите цель использования:
+						.select
+							.slct_arrow
+								i.fa.fa-angle-down
+							a(href="#" class="slct") Пароль
+							ul.drop
+								li Еще что нибудь 1
+								li Еще что нибудь 2
+					.chosse-the-goal.col-md-6
+						.title
+							h4 Авторизация:
 						.main-input
 							.main-level
 								span Цель использования
@@ -81,18 +91,14 @@ block main
 												li Цель использования4-4
 					.authorization.col-md-6
 						.title
-							h4 Авторизация:
+							h4 Срок:
 						.select
 							.slct_arrow
 								i.fa.fa-angle-down
-							a(href="#" class="slct") Пароль
+							a(href="#" class="slct") 1 мес.
 							ul.drop
-								li Еще что нибудь 1
-								li Еще что нибудь 2
-					.e_mail_block.col-md-6
-						.e_mail_wrapper
-							label Введите ваш e-mail:
-							input(type='text' name='email')
+								li 2 мес.
+								li 3 мес.
 					.choose_payment_type.col-md-6
 						.title
 							h4 Выберите способ оплаты:
@@ -103,10 +109,15 @@ block main
 							ul.drop
 								li Еще что нибудь 1
 								li Еще что нибудь 2
-					.submit-block.col-md-6
+					.e_mail_block.col-md-6
+						.e_mail_wrapper
+							label Введите ваш e-mail:
+							input(type='text' name='email')
+					.submit-block.col-md-12
 						input(type='submit' class='proxi-btn' value='Отправить')
 						.common-price Общая стоимость:&#160
 							span.red_color 100р.,
+							br
 							| Скидка:&#160
 							span.red_color 10%
 
