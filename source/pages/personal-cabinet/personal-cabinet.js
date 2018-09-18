@@ -71,7 +71,7 @@ const checked = (function(){
 				// });
 				// finalValue.textContent = value;
 				proxiLength.textContent = arrLi.length;
-				
+
 			},
 			removeLi = function () {
 				chosseBtn.checked = false;
@@ -101,7 +101,7 @@ const checked = (function(){
 				arrInput = [].filter.call(arrInput,item => item !== that);
 				ul.removeChild(arrLi[delLi]);
 				arrLi.splice(delLi,1);
-				counter();				
+				counter();
 			},
 			currInput = function (ev,arr) {
 				// ev.preventDefault();
@@ -119,7 +119,7 @@ const checked = (function(){
 				} else {
 					removeItems(this);
 				}
-			}			
+			}
 		},
 			chosseAll = function(){
 				if(this.checked) {
