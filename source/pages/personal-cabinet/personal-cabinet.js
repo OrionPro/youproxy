@@ -52,8 +52,8 @@ const checked = (function(){
 				}
 			 	if(arr) {
 					arr.push(elem);
-				let childrenText = parent.children[0].textContent;
-					return childrenText;
+				let IP = parent.querySelector('td:last-child').textContent; // находим IP в таблице
+					return IP;
 				}
 					return parent;
 			},
